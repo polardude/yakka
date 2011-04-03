@@ -1,6 +1,9 @@
 <h1>My Tasks</h1>
 <ol>
 	<% @tasks.each do |t| %>
-		<li><%= link_to t.content, edit_task_path(t) %></li>
+		<li><%= link_to t.content, edit_task_path(t) %>
+			<%= link_to "X", task_path(t), :method => :delete, 
+			:remote => false, :confirm => "Are you really sure?" %></li>
 	<% end %>
 </ol>
+<%= link_to "Add Task", new_task_path %>

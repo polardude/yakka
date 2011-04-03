@@ -1,0 +1,7 @@
+<% semantic_form_for @task do |f| %>
+	<% f.inputs do %>
+		<%= f.input :done, :label => false, :as => 'check_boxes' %><%= f.input :content %>
+		<%= f.input :due_date %><%= f.input :due_time %>
+	<% end %>
+	<%= f.buttons %>
+<% end %>
