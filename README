@@ -1,1 +1,4 @@
 Yakka - A simple to-do list manager with notifications. A practice showcase on Rails 3.
+
+Models:
+Task (tasks) -- Content, Due Date/Time, Status

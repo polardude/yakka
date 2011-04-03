@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  content: MyText
+  due_date: 2011-04-03
+  due_time: 2011-04-03 14:32:34
+  status: false
+
+two:
+  content: MyText
+  due_date: 2011-04-03
+  due_time: 2011-04-03 14:32:34
+  status: false
