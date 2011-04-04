@@ -2,3 +2,4 @@ Yakka - A simple to-do list manager with notifications. A practice showcase on R
 
 Models:
 Task (tasks) -- Content, Due Date/Time, Status
+Category (categories) -- Category
