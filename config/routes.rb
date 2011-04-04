@@ -1,8 +1,10 @@
 Yakka::Application.routes.draw do
   
-  resources :tasks
+  resources :categories do
+    resources :tasks
+  end
   
-  root :to => "tasks#index"
+  #root :to => "categories/1/tasks#index"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
