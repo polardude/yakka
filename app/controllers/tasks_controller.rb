@@ -1,7 +1,9 @@
 class TasksController < ApplicationController
   
   def index
-    @tasks = Task.all
+    @categories = Category.all
+    @category = Category.find(params[:category_id])
+    @tasks = @category.tasks
   end
   
   def edit
