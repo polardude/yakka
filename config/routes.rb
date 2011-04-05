@@ -1,6 +1,7 @@
 Yakka::Application.routes.draw do
   
   resources :tasks
+  resources :categories
   
   root :to => "tasks#index"
   
