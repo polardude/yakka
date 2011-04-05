@@ -15,24 +15,20 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(params[:task])
     
-    respond_to do |format|
-      if @task.save
-        format.html { redirect_to tasks_path }
-      else
-        format.html { render :action => "new"}
-      end
+    if @task.save
+      redirect_to tasks_path
+    else
+      render :action => "new"
     end
   end
   
   def update
     @task = Task.find(params[:id])
     
-    respond_to do |format|
-      if @task.update_attributes(params[:task])
-        format.html { redirect_to tasks_path }
-      else
-        format.html { render :action => "edit" }
-      end
+    if @task.update_attributes(params[:task])
+      redirect_to tasks_path
+    else
+      render :action => "edit"
     end
   end
   
@@ -40,8 +36,6 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     @task.destroy
   
-    respond_to do |format|
-      format.html { redirect_to tasks_path }
-    end
+    redirect_to tasks_path
   end
 end

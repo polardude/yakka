@@ -6,7 +6,6 @@ class Task < ActiveRecord::Base
   
   private
     def default_values
-      self.done ||= false
       self.category_id ||= 1
     end
 end

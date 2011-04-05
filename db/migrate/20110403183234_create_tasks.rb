@@ -4,7 +4,7 @@ class CreateTasks < ActiveRecord::Migration
       t.text :content
       t.date :due_date
       t.time :due_time
-      t.boolean :done
+      t.boolean :done, :default => false
 
       t.timestamps
     end
