@@ -1,0 +1,7 @@
+<h1>Tasks</h1>
+<ol>
+<% @tasks.each do |t| %>
+	<li><%= t.content %></li>
+<% end %>
+</ol>
+<%= link_to "Back to Categories", categories_path %>

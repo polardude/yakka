@@ -1,16 +1,10 @@
-<h1>Categories</h1>
-<ul>
-	<% @categories.each do |c| %>
-		<li><%= c.category %></li>
-	<% end %>
-</ul>	
 <h1>My Tasks</h1>
 <ol>
 	<% @tasks.each do |t| %>
-		<li><%= link_to t.content, edit_category_task_path(t, @category) %>
-		<%= link_to "X", category_task_path(t, @category), 
+		<li><%= link_to t.content, edit_task_path(t) %>
+		<%= link_to "X", task_path(t), 
 		:method => :delete, :remote => false, 
 		:confirm => "Are you really sure?" %></li>
 	<% end %>
 </ol>
-<%= link_to "Add Task", new_category_task_path %>
+<%= link_to "Add Task", new_task_path %>
