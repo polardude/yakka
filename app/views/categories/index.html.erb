@@ -1,7 +1,7 @@
 <h1>My Categories</h1>
 <ol>
 	<% @categories.each do |c| %>
-		<li><%= link_to c.category, category_path(c), :remote => false %>
+		<li><%= link_to c.category, category_path(c), :remote => true %>
 			<%= link_to "E", edit_category_path(c) %>
 			<%= link_to "X", category_path(c), :method => :delete, 
 			:remote => false, :confirm => "Are you really sure?" %></li>
